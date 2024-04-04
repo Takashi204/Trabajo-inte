@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almacenamiento de Materiales</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* Para dar espacio al navbar fijo */
+        }
+        .section-heading {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .material-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .material-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .material-list li:last-child {
+            border-bottom: none;
+        }
+        .btn-primary-custom {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary-custom:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .btn-danger-custom {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .btn-danger-custom:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+        .card {
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <a class="navbar-brand" href="#">Almacenamiento de Materiales</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#materiales">Materiales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#agregar-material">Agregar Material</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="materiales" class="container mt-5">
+        <h2 class="section-heading text-center mb-4">Lista de Materiales</h2>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Madera</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Cantidad: 100 unidades</p>
+                        <p class="card-text">Ubicación: Estantería 1, Estante 2</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Herramientas</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Cantidad: 50 unidades</p>
+                        <p class="card-text">Ubicación: Estantería 2, Estante 3</p>
+                    </div>
+                </div>
+                <!-- Agrega más materiales aquí si es necesario -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="agregar-material" class="container mt-5">
+        <h2 class="section-heading text-center mb-4">Agregar Nuevo Material</h2>
+        <!-- Formulario para agregar un nuevo material -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre del Material</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del material">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-primary-custom btn-block">Agregar Material</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery y
+

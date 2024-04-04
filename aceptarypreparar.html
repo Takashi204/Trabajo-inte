@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparar y Entregar Productos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* Para dar espacio al navbar fijo */
+        }
+        .section-heading {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .order-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .order-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .order-list li:last-child {
+            border-bottom: none;
+        }
+        .btn-primary-custom {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary-custom:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .btn-success-custom {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-success-custom:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+        .btn-danger-custom {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .btn-danger-custom:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <a class="navbar-brand" href="#">Preparar y Entregar Productos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#ordenes-pendientes">Órdenes Pendientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#preparar-entregar">Preparar y Entregar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="ordenes-pendientes" class="container mt-5">
+        <h2 class="section-heading text-center mb-4">Órdenes Pendientes</h2>
+        <ul class="order-list">
+            <li class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h5>Orden #001</h5>
+                    <p>Productos: Martillo, Taladro, Sierra</p>
+                    <p>Vendedor: Juan Pérez</p>
+                </div>
+                <button class="btn btn-success btn-sm btn-preparar">Preparar</button>
+            </li>
+            <li class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h5>Orden #002</h5>
+                    <p>Productos: Destornillador, Llave Inglesa</p>
+                    <p>Vendedor: María García</p>
+                </div>
+                <button class="btn btn-success btn-sm btn-preparar">Preparar</button>
+            </li>
+            <!-- Agrega más órdenes aquí si es necesario -->
+        </ul>
+    </section>
+    
+    <section id="preparar-entregar" class="container mt-5">
+        <h2 class="section-heading text-center mb-4">Preparar y Entregar</h2>
+        <!-- Aquí se mostrará el formulario o la lista de preparación y entrega -->
+        <div class="text-center">
+            <p>No hay órdenes seleccionadas para preparar y entregar.</p>
+        </div>
+    </section>
+
+    <!-- jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Acción cuando se hace clic en el botón "Preparar"
+            $('.btn-preparar').click(function() {
+                var orden = $(this).closest('li').find('h5').text();
+                // Puedes realizar aquí alguna acción, como marcar la orden como preparada
+                // Por ahora, mostramos un mensaje de confirmación
+                alert('La orden ' + orden + ' ha sido preparada y está lista para entregar.');
+            });
+        });
+    </script>
+</body>
+</html>
